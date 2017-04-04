@@ -17,56 +17,74 @@
     		<div class="col-md-12">
     			<div class="jumbotron">
     				<h2>
-    					Epicodus Credit Union
+    					Sign up Info:
     				</h2>
           </div>
         </div>
       </div>
     </div>
     <div class="container">
-      <form role="form" id="bankaccount">
+      <form role="form" id="contactInfo">
         <div class="row">
           <div class="col-md-4">
-            <h2>Register a new account: </h2>
+            <h2>Please enter your personal info: </h2>
+
     		    <div class="form-group">
               <label for="new-first-name">Name: </label>
               <input type="text" class="form-control" id="name">
             </div>
-            <div class="form-group">
-              <label for="new-first-name">Initial Deposit: </label>
-              <input type="number" class="form-control" id="initial" required>
-            </div>
-          </div>
 
-          <div class="col-md-5">
-            <h2>Deposit or withdraw funds: </h2>
             <div class="form-group">
-              <label for="new-first-name">Deposit Amount: </label>
-              <input type="number" class="form-control" id="deposit" required>
+              <label for="new-first-name">Email: </label>
+              <input type="email" class="form-control" id="email" required>
             </div>
-            <div class="form-group">
-              <label for="new-first-name">Withdraw Amount: </label>
-              <input type="number" class="form-control" id="withdraw" required>
-            </div>
-          </div>
 
-          <div class="row">
-          </div>
-          <div class="col-md-4">
+            <div class="form-group">
+              <label for="new-first-name">DOB: </label>
+              <input type="date" class="form-control" id="birthday" required>
+            </div>
+
+            <label for="">Languages: </label>
+            <select class="form-control" id="languages">
+              <option value="php">PHP</option>
+              <option value="ruby">Ruby</option>
+              <option value="java">Java</option>
+              <option value="ccc">c#</option>
+            </select>
+
+            <div class="form-group">
+              <label for="new-first-name">Street: </label>
+              <input type="text" class="form-control" id="street" required>
+            </div>
+            <div class="form-group">
+              <label for="new-first-name">City: </label>
+              <input type="text" class="form-control" id="city" required>
+            </div>
+            <div class="form-group">
+              <label for="new-first-name">State: </label>
+              <input type="text" class="form-control" id="state" required>
+            </div>
+            <div class="form-group">
+              <label for="new-first-name">Zip Code: </label>
+              <input type="text" class="form-control" id="zipcode" required>
+            </div>
+
+            <br>
             <button type="submit" class="btn btn-default">
               Submit
             </button>
           </div>
+      </div>
+    </form>
+  </div>
 
-        </div>
-      </form>
-      <div class="row">
+      <!-- <div class="row">
         <div class="col-md-12">
-          <h2>Hello <span class="customer"></span>, your</h2>
-          <h3>Current Balance:</h3>
+          <h2>Hello <span class="person"></span></h2>
+          <h3>Your info: </h3>
           <h4>$ <span class="final"></span></h4>
         </div>
       </div>
-    </div>
+    </div> -->
   </body>
 </html>

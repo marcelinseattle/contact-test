@@ -1,39 +1,49 @@
 //Business Logic
-function BankAccount(name, initial, deposit, withdraw) {
+function Contact(name, email, dob, language) {
   this.name = name;
-  this.initialDepo = initial;
-  this.deposit = deposit;
-  this.withdraw = withdraw;
+  this.email = email;
+  this.dateOfBirth = dob;
+  this.language = language;
+  this.address = [];
 }
 
-BankAccount.prototype.result = function() {
-  // var currentValue = this.initialDepo;
-  if (this.initialDepo + this.deposit < this.withdraw) {
-    alert("Sorry for the inconvinence, but you don't have enough funds!");
+function Address(street, city, state, zipcode) {
+  this.street = street;
+  this.city = city;
+  this.state = state;
+  this.zipcode = zipcode;
+}
 
-  } else if
-    (this.initialDepo === 0 && this.deposit === 0 && this.withdraw === 0) {
-    alert("Enter a valid information!");
-  }
-   else {
-    return this.initialDepo + this.deposit - this.withdraw;
-  }
-  }
+
+Address.prototype.fullAddress = function() {
+  return this.street + "," + this.city + "," + this.state + "," + this.zipcode;
+}
+
 
 //User Logic
 $(document).ready(function(){
-  $("#bankaccount").submit(function(event){
+  $("#contactInfo").submit(function(event){
     event.preventDefault();
-
     var nameInput = $("#name").val();
-    var initialInput = parseInt($("#initial").val());
-    var depositInput = parseInt($("#deposit").val());
-    var withdraw = parseInt($("#withdraw").val());
+    var emailInput = $("#email").val();
+    var birthDate = $("#birthday").val();
+    var languageInput = $("#languages").val();
 
-    var accountInput = new BankAccount(nameInput, initialInput, depositInput, withdraw);
+    var informationInput = new Contact(nameInput, emailInput, birthDate, languageInput);
 
-    $(".customer").text(nameInput);
-    $(".final").text(accountInput.result());
 
+
+    var streetInput = $("#street").val();
+    var cityInput = $("#city").val();
+    var stateInput = $("#state").val();
+    var zipcodeInput = $("#zipcode").val();
+
+    var streetInfo = new Address(streetInput, cityInput, stateInput, zipcodeInput);
+informationInput.address.push(streetInfo);
+
+console.log(informationInput);
+
+
+console.log(streetInfo.fullAddress());
   });
 });
